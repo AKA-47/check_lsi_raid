@@ -1405,6 +1405,7 @@ MAIN: {
 	print getStatusString("Warning",\@statusLevel_a);
 	my $perf_str = getPerfString(\@statusLevel_a);
 	if($perf_str){
+		$perf_str =~ s/\//\_/g;
 		print "|".$perf_str;
 	}
 	if($VERBOSITY == 2 || $VERBOSITY == 3){
